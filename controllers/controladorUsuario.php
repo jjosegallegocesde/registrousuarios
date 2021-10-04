@@ -19,9 +19,7 @@
         echo($descripcion);
         echo($fotografia);*/
 
-        $objeto=new DataBase();
-        $objeto->conectarConBD();
-
+        
         
 
     }
