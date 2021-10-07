@@ -1,8 +1,5 @@
 <?php 
 
-    include('../models/DataBase.php');
-
-
     if(isset($_POST["boton"])){
 
         $nombres=$_POST["nombres"];
@@ -22,6 +19,8 @@
         
         
 
+    }else{
+        echo("no deberias estar aquí");
     }
 
    
