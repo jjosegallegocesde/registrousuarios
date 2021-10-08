@@ -3,10 +3,10 @@
     class BaseDatos {
 
         //ATRIBUTOS=VARIABLES=DATOS
-        public $usuario="root";
+        public $usuario="rootssssss";
         public $passwordBD="";
         public $servidorBD="mysql:host=localhost;";
-        public $nombreBD="dbname=tiendita";
+        public $nombreBD="dbname=tiendabello";
         
 
         //METODO ESPECIAL CONSTRUCTOR
@@ -19,7 +19,8 @@
             try{
 
                 $datosGeneralesBD=$this->servidorBD.$this->nombreBD;
-                $conexion= new PDO($datosGeneralesBD);
+                $conexion= new PDO($datosGeneralesBD,$this->usuario,$this->passwordBD);
+                echo("exito conectandonos a la bd");
 
             }catch(PDOException $error){
 
