@@ -3,7 +3,7 @@
     class BaseDatos {
 
         //ATRIBUTOS=VARIABLES=DATOS
-        public $usuario="rootssssss";
+        public $usuario="root";
         public $passwordBD="";
         public $servidorBD="mysql:host=localhost;";
         public $nombreBD="dbname=tiendabello";

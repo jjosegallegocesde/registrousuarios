@@ -1,7 +1,9 @@
 <?php 
 
     //1. Incluir el modelo de la BD
+    //   Incluir el modelo Empleado
     include("../models/BaseDatos.php");
+    include("../models/Empleado.php");
 
     //2.  Recoger los datos de la vista
     if(isset($_POST["boton"])){
@@ -13,12 +15,16 @@
         $descripcion=$_POST["descripcion"];
         $fotografia=$_POST["fotografia"];
 
-        /*echo($nombres);
-        echo($apellidos);
-        echo($email);
-        echo($edad);
-        echo($descripcion);
-        echo($fotografia);*/
+
+
+        //3. Creo un objeto(variable) del modelo EMPLEADO
+        $empleado=new Empleado($nombres,$apellidos,$email,$edad,$descripcion,$fotografia);
+
+        //acceder a los metodos de Empleado
+        echo($empleado->registrar());
+
+
+        
 
         //3. Utilizar la clase BD 
         //Para utilizar una clase hay que sacarle copia
@@ -26,8 +32,8 @@
         //para utilizar una clase hay que crear una instancia
 
         //UN OBJETO ES UNA VARIABLE
-        $baseDatos=new BaseDatos();
-        $baseDatos->conectarConBD();
+        //$baseDatos=new BaseDatos();
+        //$baseDatos->conectarConBD();
 
         
         
