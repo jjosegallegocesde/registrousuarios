@@ -20,21 +20,17 @@
         //3. Creo un objeto(variable) del modelo EMPLEADO
         $empleado=new Empleado($nombres,$apellidos,$email,$edad,$descripcion,$fotografia);
 
-        //acceder a los metodos de Empleado
-        echo($empleado->registrar());
+    
+       //4. Ejecutar el metodo insertar registro de la bd
+       $baseDatos=new BaseDatos();
+       $resultado=$baseDatos->insertarRegistro($empleado->registrar());
 
-
-        
-
-        //3. Utilizar la clase BD 
-        //Para utilizar una clase hay que sacarle copia
-        //para utilizar una clase hay que crear un objeto
-        //para utilizar una clase hay que crear una instancia
-
-        //UN OBJETO ES UNA VARIABLE
-        //$baseDatos=new BaseDatos();
-        //$baseDatos->conectarConBD();
-
+       //5. valido el resultado
+       if($resultado){
+           echo("exito en el registro");
+       }else{
+           echo("upss... Tenemos problemas para registrar datos");
+       }
         
         
 
