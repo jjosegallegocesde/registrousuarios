@@ -4,6 +4,7 @@
     //   Incluir el modelo Empleado
     include("../models/BaseDatos.php");
     include("../models/Empleado.php");
+    
 
     //2.  Recoger los datos de la vista
     if(isset($_POST["boton"])){
@@ -28,6 +29,9 @@
        //5. valido el resultado
        if($resultado){
            echo("exito en el registro");
+           header("Location:../views/registro.php");
+           
+
        }else{
            echo("upss... Tenemos problemas para registrar datos");
        }
