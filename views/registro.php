@@ -98,11 +98,11 @@
         <div class="modal fade" id="modal" tabindex="-1">
           <div class="modal-dialog">
             <div class="modal-content">
-              <div class="modal-header">
+              <div class="modal-header bg-primary text-white">
                 <h5 class="modal-title" id="exampleModalLabel">La tiendita del horror</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
-              <div class="modal-body">
+              <div class="modal-body text-dark">
                 <h5>PRUEBA</h5>
               </div>
             </div>
@@ -110,7 +110,8 @@
         </div>
       <?php ?>
     </section>
-    
+  
+<script type="module" src="../public/js/lanzarmodal.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ" crossorigin="anonymous"></script>
 </body>
 </html>
