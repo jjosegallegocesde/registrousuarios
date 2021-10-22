@@ -1,3 +1,11 @@
+<?php 
+
+ if(!isset($_SESSION)){
+        session_start();
+    }
+
+?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -83,9 +91,10 @@
                     </form>
 
                 </div>
-                <div class="col-12 col-md-4 align-self-end">
+                <div class="col-12 col-md-4 align-self-end text-center">
                     <img src="../public/img/empleados.png" alt="imagen" class="w-100 img-fluid">
-                </div>
+                    <a href="listaEmpleado.php">ver inventario</a>
+                  </div>
             </div>
         </div>
 
@@ -94,7 +103,7 @@
     </main>
 
     <section>
-      <?php ?>
+      <?php if(isset($_SESSION['mensaje'])):?>
         <div class="modal fade" id="modal" tabindex="-1">
           <div class="modal-dialog">
             <div class="modal-content">
@@ -103,12 +112,13 @@
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body text-dark">
-                <h5>PRUEBA</h5>
+                <h5><?php echo($_SESSION['mensaje'])?></h5>
               </div>
             </div>
           </div>
         </div>
-      <?php ?>
+      <?php unset($_SESSION['mensaje'])?>
+      <?php endif ?>
     </section>
   
 <script type="module" src="../public/js/lanzarmodal.js"></script>

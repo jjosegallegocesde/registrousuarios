@@ -53,6 +53,31 @@
 
         }
 
+        public function buscarRegistros($consultaSQL){
+
+             try{
+                //1. construir un puente con la bd
+                $conexion=$this->conectarConBD();
+
+                //2. preparar la bd para que reciba mi consulta
+                $operacion=$conexion->prepare($consultaSQL);
+
+                //3.Establecer el formato de los daos consultados
+                $operacion->setFetchMode(PDO::FETCH_ASSOC);
+
+                //4. Ejecutar la operacion
+                $operacion->execute();
+
+                return $operacion->fetchAll();
+
+            }catch(PDOException $error){
+
+                 die("Tenemos un problema ".$error->getMessage());
+
+            }
+
+        }
+
 
         
     }

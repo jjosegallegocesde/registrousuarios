@@ -1,5 +1,9 @@
 <?php 
 
+    if(!isset($_SESSION)){
+        session_start();
+    }
+
     //1. Incluir el modelo de la BD
     //   Incluir el modelo Empleado
     include("../models/BaseDatos.php");
@@ -28,7 +32,9 @@
 
        //5. valido el resultado
        if($resultado){
-           echo("exito en el registro");
+
+           $_SESSION['mensaje']="exito en el registro";
+
            header("Location:../views/registro.php");
            
 
