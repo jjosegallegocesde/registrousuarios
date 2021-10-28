@@ -12,7 +12,7 @@
      $baseDatos=new BaseDatos();
      $empleados=$baseDatos->buscarRegistros($empleado->buscar());
 
-     print_r($empleados);
+     //print_r($empleados);
 
 
 ?>

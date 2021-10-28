@@ -20,7 +20,7 @@
 
                 $datosGeneralesBD=$this->servidorBD.$this->nombreBD;
                 $conexion= new PDO($datosGeneralesBD,$this->usuario,$this->passwordBD);
-                echo("exito conectandonos a la bd");
+                //echo("exito conectandonos a la bd");
                 return $conexion;
 
             }catch(PDOException $error){
