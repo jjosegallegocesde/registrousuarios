@@ -72,12 +72,12 @@
                                                     <img src="<?= $empleado["foto"] ?>" alt="foto" class="img-fluid w-100">
                                                 </div>
                                                 <div class="col-9">
-                                                    <form action="" method="">
+                                                    <form action="../controllers/controladorEditarEmpleado.php?id=<?=$empleado["id"]?>" method="POST">
                                                         <div class="mb-3">
                                                             <label  class="form-label">Email</label>
-                                                            <input type="text" class="form-control" value="<?= $empleado["email"] ?>">
+                                                            <input name="email" type="text" class="form-control" value="<?= $empleado["email"] ?>">
                                                         </div>
-                                                        <button type="submit" class="btn btn-primary">Editar</button>
+                                                        <button type="submit" class="btn btn-primary" name="botonEditar">Editar</button>
                                                     </form>
                                                 </div>
                                             </div>
